@@ -1,8 +1,10 @@
 part of '{{name.snakeCase()}}_cubit.dart';
 
 
-abstract class {{name.pascalCase()}}State extends BaseState{
-const {{name.pascalCase()}}State(super.isLoading, super.errorMessage);
+abstract class {{name.pascalCase()}}State extends Equatable{
+  final bool isLoading;
+  final String errorMessage;
+const {{name.pascalCase()}}State(this.isLoading, this.errorMessage);
 }
 
 class {{name.pascalCase()}}Initial extends {{name.pascalCase()}}State {
